@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main_content"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_gray"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/tab"></include>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_reflesh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleview_task"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <!--开始任务-->
+        <RelativeLayout
+            android:id="@+id/task_open_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/tran_half"
+            >
+
+            <!--正在进行中的任务-->
+            <LinearLayout
+                android:id="@+id/task_loading_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+
+                <ImageView
+                    android:id="@+id/task_loading_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ico_jinxingzhong"
+                    />
+
+                <TextView
+                    android:id="@+id/task_loading_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/margin_10px"
+                    android:paddingRight="@dimen/margin_40px"
+                    android:text="任务正在行进中,已获得奖励x元"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_30px"
+                    />
+
+            </LinearLayout>
+
+            <!--开始任务-->
+
+            <LinearLayout
+                android:id="@+id/start_task_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_18px"
+                android:layout_marginLeft="@dimen/margin_20px"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ico_jinbi"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_task_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12px"
+                    android:text="共0个任务 可获得0.00元"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_24px"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/begin_task_btn"
+                android:layout_width="220px"
+                android:layout_height="78px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20px"
+                android:background="@drawable/selecter_blue_btn"
+                android:gravity="center"
+                android:text="开始任务"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_32px"
+                />
+
+        </RelativeLayout>
+
+        <!--没有奖励任务-->
+        <!--   <RelativeLayout
+               android:id="@+id/no_task_layout"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:visibility="gone">
+
+               <ImageView
+                   android:id="@+id/iv_hint"
+                   android:layout_width="316px"
+                   android:layout_height="196px"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="260px"
+                   android:src="@mipmap/img_wurenwu"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@+id/iv_hint"
+                   android:layout_centerHorizontal="true"
+                   android:layout_marginTop="@dimen/margin_30px"
+                   android:text="暂歇一歇,暂时没有奖励任务哦!"
+                   android:textColor="@color/text_gray666"
+                   android:textSize="@dimen/text_size_30px"
+                   />
+
+           </RelativeLayout>-->
+        <!--邀请好友一起赚钱-->
+        <ImageView
+            android:id="@+id/invite_friend_iv"
+            android:layout_width="208px"
+            android:layout_height="178px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80px"
+            android:layout_marginLeft="@dimen/margin_8px"
+            android:src="@drawable/button_yaoqinghaoyou"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

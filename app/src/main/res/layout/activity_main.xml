@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/main_rg"
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/task_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/selector_rb_task"
+            android:paddingBottom="@dimen/margin_10px"
+            android:paddingLeft="64px"
+            android:paddingTop="@dimen/margin_10px"
+            />
+
+        <RadioButton
+            android:id="@+id/excahnge_rb"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/selector_rb_exchange"
+            android:paddingBottom="@dimen/margin_18px"
+            android:paddingTop="@dimen/margin_10px"
+            />
+
+
+        <RadioButton
+            android:id="@+id/my_rb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableRight="@drawable/selector_rb_my"
+            android:paddingBottom="@dimen/margin_10px"
+            android:paddingRight="64px"
+            android:paddingTop="@dimen/margin_10px"
+
+            />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/main_view"
+        style="@style/line_view"
+        android:layout_above="@+id/main_rg"
+        />
+
+    <FrameLayout
+        android:id="@+id/main_fl_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_view"
+        android:background="@color/main_gray"
+        />
+
+</RelativeLayout>

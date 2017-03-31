@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="360px">
+
+        <LinearLayout
+            android:id="@+id/item_red_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_hongbao1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="160px"
+                android:text="恭喜您，抢得红包"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_size_30px"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_18px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥"
+                    android:textColor="@color/blue_theme"
+                    android:textSize="@dimen/text_size_36px"/>
+
+                <TextView
+                    android:id="@+id/item_money_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_2px"
+                    android:text="0.00"
+                    android:textColor="@color/blue_theme"
+                    android:textSize="48px"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_18px"
+                android:text="已存入账户，可提现消费"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_size_26px"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/item_red_nothing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="360px"
+            android:background="@drawable/bg_hongbaoyiqingwan"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="114px"
+                android:gravity="center_horizontal"
+                android:text="很遗憾，亲，今日红包已抢完咯！"
+                android:textColor="@color/text_gray666"
+                android:textSize="@dimen/text_size_30px"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/item_red_total_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40px"
+        android:gravity="bottom"
+        android:paddingLeft="@dimen/margin_20px"
+        android:text="红包总金额：¥0.00，共0个，剩余0个"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_size_26px"/>
+
+
+</LinearLayout>

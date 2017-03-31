@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pop_conpleted_tv"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="@color/pop_text_bg"
+            android:drawableLeft="@drawable/ico_fanhui_pop"
+            android:gravity="right|center_vertical"
+            android:paddingLeft="@dimen/margin_20px"
+            android:paddingRight="@dimen/margin_20px"
+            android:text="完成"
+            android:textColor="@color/blue_theme"
+            android:textSize="@dimen/text_size_30px"/>
+
+
+        <com.vooda.world.ui.widget.WheelView
+            android:id="@+id/pop_wheelView"
+            android:layout_width="match_parent"
+            android:layout_height="600px"
+            android:layout_gravity="center_horizontal"
+            app:itemNumber="5"
+            app:lineColor="@color/line_gray"
+            app:lineHeight="1px"
+            app:maskHeight="120px"
+            app:noEmpty="true"
+            app:normalTextColor="@color/text_gray666"
+            app:normalTextSize="@dimen/text_size_34px"
+            app:selectedTextColor="@color/text_black"
+            app:selectedTextSize="@dimen/text_size_36px"
+            app:unitHeight="120px"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

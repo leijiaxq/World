@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/margin_20px"
+              android:layout_marginRight="@dimen/margin_20px"
+              android:background="@color/main_gray"
+              android:orientation="vertical"
+    >
+
+    <View
+        android:id="@+id/item_v"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_gray"/>
+
+    <RelativeLayout
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:background="@drawable/ripple_selector_item_white">
+
+        <ImageView
+            android:id="@+id/item_icon_iv"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20px"
+            android:src="@drawable/default_picture"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_30px"
+            android:layout_toLeftOf="@+id/item_right_layout"
+            android:layout_toRightOf="@+id/item_icon_iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="bottom"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_28px"
+                />
+
+            <TextView
+                android:id="@+id/item_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/item_title_tv"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_size_26px"
+                />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/item_right_layout"
+            android:layout_width="200px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+
+            <TextView
+                android:id="@+id/item_reward_tv"
+                android:layout_width="160px"
+                android:layout_height="68px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_20px"
+                android:background="@drawable/selector_task_orange"
+                android:gravity="center"
+                android:text="正在进行中"
+                android:textColor="@color/white"
+                android:textSize="@dimen/margin_26px"
+                />
+
+            <TextView
+                android:id="@+id/item_open_reward_tv"
+                android:layout_width="160px"
+                android:layout_height="68px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_20px"
+                android:background="@drawable/selector_task_blue"
+                android:gravity="center"
+                android:text="打开得奖励"
+                android:textColor="@color/white"
+                android:textSize="@dimen/margin_26px"
+                />
+
+            <ImageView
+                android:id="@+id/item_reward_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_36px"
+                android:layout_marginRight="@dimen/margin_2px"
+                android:src="@drawable/ico_jiangl"
+                />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

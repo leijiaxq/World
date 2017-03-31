@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_gray"
+              android:orientation="vertical">
+
+    <!--没有奖励任务-->
+    <RelativeLayout
+        android:id="@+id/no_task_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/iv_hint"
+            android:layout_width="316px"
+            android:layout_height="196px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="260px"
+            android:src="@drawable/img_wurenwu"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_hint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_30px"
+            android:lineSpacingMultiplier="1.2"
+            android:gravity="center"
+            android:text="任务被抢光！\n明天早上10点，更多好玩的任务等您！"
+            android:textColor="@color/text_gray666"
+            android:textSize="@dimen/text_size_30px"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

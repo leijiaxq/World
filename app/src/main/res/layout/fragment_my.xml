@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/main_gray"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/tab"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="500px"
+                android:background="@drawable/bg_wode"
+                android:orientation="vertical"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/my_icon_iv"
+                    android:layout_width="220px"
+                    android:layout_height="220px"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="170px"
+                    android:src="@drawable/default_picture"
+                    />
+
+                <!-- <ImageView
+                     android:id="@+id/my_icon_iv"
+                     android:layout_width="220px"
+                     android:layout_height="220px"
+                     android:layout_gravity="center_horizontal"
+                     android:layout_marginTop="170px"
+                     />-->
+
+
+                <TextView
+                    android:id="@+id/my_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:text=""
+                    android:textColor="@color/text_black"
+                    android:textSize="@dimen/text_size_30px"
+                    />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/my_friend_tv"
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+                android:background="@drawable/ripple_selector_item_white"
+                android:drawableLeft="@drawable/ico_haoyou"
+                android:drawablePadding="@dimen/margin_20px"
+                android:drawableRight="@drawable/ico_more"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20px"
+                android:paddingRight="@dimen/margin_20px"
+                android:text="我的好友"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_30px"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_gray"
+
+                />
+
+            <TextView
+                android:id="@+id/my_gonging_task_tv"
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+                android:background="@drawable/ripple_selector_item_white"
+                android:drawableLeft="@drawable/ico_jinxingrenwu"
+                android:drawablePadding="@dimen/margin_20px"
+                android:drawableRight="@drawable/ico_more"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20px"
+                android:paddingRight="@dimen/margin_20px"
+                android:text="进行中的任务"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_30px"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/line_gray"
+
+                />
+
+            <TextView
+                android:id="@+id/my_completed_task_tv"
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+                android:background="@drawable/ripple_selector_item_white"
+                android:drawableLeft="@drawable/ico_wanchengrenwu"
+                android:drawablePadding="@dimen/margin_20px"
+                android:drawableRight="@drawable/ico_more"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_20px"
+                android:paddingRight="@dimen/margin_20px"
+                android:text="已完成的任务"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_30px"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

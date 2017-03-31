@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translate_gray"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_dialog"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/pop_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="69px"
+            android:layout_marginRight="70px"
+            android:layout_marginTop="80px"
+            android:gravity=""
+            android:lineSpacingMultiplier="1.2"
+            android:text=""
+            android:textColor="@color/text_gray666"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/text_size_34px"
+            android:layout_marginBottom="80px"
+            />
+
+        <Button
+            android:id="@+id/pop_confirm_btn"
+            android:layout_width="368px"
+            android:layout_height="100px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_30px"
+            android:background="@drawable/selecter_blue_btn"
+            android:gravity="center"
+            android:text="立即更新"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_32px"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

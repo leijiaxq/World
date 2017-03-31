@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.vooda.world"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 5
+        versionName "1.0.4"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+  /*  buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }*/
+
+    signingConfigs{
+        release {
+            storeFile file("../world.jks")        //证书存放目录
+            storePassword "vooda123"                               //密码
+            keyAlias "world"                                                //别名
+            keyPassword "vooda123"                                //密码(就是设置证书那两个密码，建议都填一样的)
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+
+            signingConfig signingConfigs.release
+            android.applicationVariants.all {
+                variant ->
+                    variant.outputs.each {
+                        output -> output.outputFile = new File(output.outputFile.parent,"掌赚天下VersionCode" + defaultConfig.versionCode + "_Build" + new Date().format("yyyyMMdd") + ".apk");
+//                        output -> output.outputFile = new File(output.outputFile.parent,"掌赚天下V" + defaultConfig.versionName + "Build" + new Date().format("yyyyMMdd") + ".apk");
+                    }
+            }
+        }
+
+    }
+
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    /*rotrofit*/
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxjava:1.2.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    //    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    //下载用的
+    //    compile 'zlc.season:rxdownload:1.2.8'
+    compile project(':rxdownload')
+    //权限管理
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.8.2@aar'
+    //    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.1@aar'
+    //微信登录分享
+    compile files('libs/wechat-sdk-android-without-mta-1.0.2.jar')
+}

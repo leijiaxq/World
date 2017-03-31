@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/margin_20px"
+              android:layout_marginRight="@dimen/margin_20px"
+              android:background="@color/main_gray"
+              android:orientation="vertical">
+
+    <View
+        android:id="@+id/item_v"
+        style="@style/line_view"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:background="@drawable/ripple_selector_item_white">
+
+        <ImageView
+            android:id="@+id/item_icon_iv"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_20px"
+            android:src="@drawable/default_picture"/>
+
+
+        <LinearLayout
+            android:layout_marginRight="@dimen/margin_10px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_30px"
+            android:layout_toLeftOf="@+id/item_money_layout"
+            android:layout_toRightOf="@+id/item_icon_iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="bottom"
+                android:text=""
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/text_size_28px"
+                />
+
+            <TextView
+                android:id="@+id/item_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/item_title_tv"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_size_26px"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/item_money_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/margin_20px">
+
+            <TextView
+                android:id="@+id/item_money_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textColor="@color/blue_theme"
+                android:textSize="@dimen/text_size_30px"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/blue_theme"
+                android:textSize="@dimen/text_size_24px"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

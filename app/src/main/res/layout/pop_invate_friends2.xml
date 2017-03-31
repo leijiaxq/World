@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translate_gray"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_dialog"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_20px"
+        >
+
+        <ImageView
+            android:layout_width="600px"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_yaoqinghaoyou"
+            />
+
+        <RelativeLayout
+            android:id="@+id/pop_invate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_26px"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/pop_confirm_btn"
+                android:layout_width="270px"
+                android:layout_height="86px"
+                android:layout_marginLeft="44px"
+                android:background="@drawable/selecter_blue_btn"
+                android:gravity="center"
+                android:text="马上邀请好友"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_32px"
+                />
+
+            <Button
+                android:id="@+id/pop_cancle_btn"
+                android:layout_width="180px"
+                android:layout_height="86px"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:layout_marginRight="44px"
+                android:background="@drawable/selecter_white_btn"
+                android:gravity="center"
+                android:text="下次吧"
+                android:textColor="@color/blue_theme"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/pop_invate_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="86px"
+            android:layout_marginTop="@dimen/margin_26px"
+            android:gravity="center_horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/pop_confirm_btn2"
+                android:layout_width="270px"
+                android:layout_height="86px"
+                android:layout_marginLeft="44px"
+                android:background="@drawable/selecter_blue_btn"
+                android:gravity="center"
+                android:text="马上邀请好友"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_32px"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginBottom="14px"
+            android:layout_marginTop="@dimen/margin_16px"
+            android:background="@drawable/jiangexian"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:text="举例"
+            android:textColor="@color/text_blue"
+            android:textSize="@dimen/text_size_24px"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/pop_tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:layout_marginTop="@dimen/margin_20px"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/invate_friends_hint2"
+            android:textColor="@color/text_black2"
+            android:textSize="@dimen/text_size_24px"
+            />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/pop_delete_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_20px"
+        android:layout_marginTop="@dimen/margin_20px"
+        android:src="@drawable/ico_guanbi"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/translate_gray"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="600px"
+        android:layout_height="860px"
+        android:layout_gravity="center">
+
+        <LinearLayout
+
+            android:layout_width="600px"
+            android:layout_height="860px"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_tankuang"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="250px"
+                android:layout_height="212px"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/img_qiangdehongbao"
+                />
+
+            <TextView
+                android:id="@+id/pop_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_40px"
+                android:gravity="center"
+                android:text="恭喜您，抢得一个红包！"
+                android:textColor="@color/text_gray666"
+                android:textSize="@dimen/text_size_36px"
+                />
+
+            <Button
+                android:id="@+id/pop_confirm_btn"
+                android:layout_width="368px"
+                android:layout_height="86px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="86px"
+                android:layout_marginTop="110px"
+                android:background="@drawable/selecter_blue_btn"
+                android:gravity="center"
+                android:text="打开看看"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_32px"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/pop_delete_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_20px"
+            android:layout_marginTop="@dimen/margin_20px"
+            android:src="@drawable/ico_guanbi"/>
+
+    </RelativeLayout>
+</LinearLayout>
